@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:riverpd/homeScreen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final nameProvider = Provider((ref) {
-  return "Olamide";
+final nameProvider = StateProvider<String?>((ref) {
+  return null;
 });
 
 void main() {
