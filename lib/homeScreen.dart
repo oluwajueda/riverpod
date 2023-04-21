@@ -12,6 +12,10 @@ class MyHomePage extends ConsumerWidget {
     ref.read(userProvider.notifier).updateName(value);
   }
 
+  void onSubmitAge(WidgetRef ref, String value) {
+    ref.read(userProvider.notifier).updateAge(int.parse(value));
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(userProvider);
@@ -22,6 +26,9 @@ class MyHomePage extends ConsumerWidget {
         children: [
           TextField(
             onSubmitted: (value) => onSubmit(ref, value),
+          ),
+          TextField(
+            onSubmitted: (value) => onSubmitAge(ref, value),
           ),
           Center(
             child: Column(
