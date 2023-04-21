@@ -18,7 +18,8 @@ class MyHomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(userProvider);
+    // final user = ref.watch(userProvider);
+    final user = ref.watch(userProvider.select((value) => value.name));
 
     return Scaffold(
       appBar: AppBar(),
@@ -32,7 +33,7 @@ class MyHomePage extends ConsumerWidget {
           ),
           Center(
             child: Column(
-              children: [Text(user.name), Text(user.age.toString())],
+              children: [Text(user), Text(user.toString())],
             ),
           )
         ],
