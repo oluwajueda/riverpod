@@ -14,6 +14,13 @@ import 'package:http/http.dart' as http;
 //futureprovider
 //streamproider
 
+//Types of Ref
+// WidgetRef
+//ProviderRef
+//Ref
+
+//ProviderObserver
+
 final fetchUserProvider = FutureProvider((ref) {
   const url = "https://jsonplaceholder.typicode.com/users/1";
 
