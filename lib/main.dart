@@ -10,6 +10,10 @@ final fetchUserProvider = FutureProvider((ref) {
   return http.get(Uri.parse(url)).then((value) => User.fromJson(value.body));
 });
 
+final streamProvider = StreamProvider((ref) async* {
+  yield [1, 2, 3, 4, 5, 6];
+});
+
 void main() {
   runApp(const ProviderScope(child: const MyApp()));
 }
