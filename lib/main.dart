@@ -4,6 +4,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpd/user.dart';
 import 'package:http/http.dart' as http;
 
+// Lists of providers
+
+//providers
+//Provider
+//stateprovider
+//statenotifier and statenotifierprovider
+//changenotifierprovider
+//futureprovider
+//streamproider
+
 final fetchUserProvider = FutureProvider((ref) {
   const url = "https://jsonplaceholder.typicode.com/users/1";
 
